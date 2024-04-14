@@ -7,16 +7,9 @@ public class Main {
 
         Integer decimalValue = null;
 
-        if (args.length == 0) {
-            System.out.println("No number value provided");
-            return;
-        }
 
-        try {
-            decimalValue = Integer.parseInt(args[0]);
-        } catch (NumberFormatException error) {
-            System.out.println("Provided value not a decimal number");
-        }
+
+
 
 
 
