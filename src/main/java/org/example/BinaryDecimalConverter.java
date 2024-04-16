@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Arrays;
+
 public class BinaryDecimalConverter {
 
     public static String convert(String[] userInput) {
@@ -16,8 +18,13 @@ public class BinaryDecimalConverter {
             return "Provided value not a decimal number";
         }
 
+        int[] intArray = new int[32];
+
+
+
        int maxFactorOfTwo = MaxFactorOfTwoFinder.findMaxFactorOfTwo(decimalValue);
 
+       intArray[maxFactorOfTwo] = 1;
 
 
 
@@ -25,7 +32,7 @@ public class BinaryDecimalConverter {
 
 
 
-        return "Something went wrong";
+        return Arrays.toString(intArray);
     }
 
 }
