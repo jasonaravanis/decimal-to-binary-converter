@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class BinaryDecimalConverter {
 
-    public static String convert(String[] userInput) {
+    public static String convertDecimalToBinary(String[] userInput) {
 
         Integer decimalValue = null;
 
