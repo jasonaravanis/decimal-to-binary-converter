@@ -16,6 +16,16 @@ public class BinaryDecimalConverter {
             return "Provided value not a decimal number";
         }
 
+       int maxFactorOfTwo = MaxFactorOfTwoFinder.findMaxFactorOfTwo(decimalValue);
+
+
+
+
+
+
+
+
         return "Something went wrong";
     }
+
 }
