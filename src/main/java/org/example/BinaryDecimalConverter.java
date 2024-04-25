@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class BinaryDecimalConverter {
 
@@ -20,19 +21,21 @@ public class BinaryDecimalConverter {
 
         int[] intArray = new int[32];
 
+        int remainder = decimalValue;
+
+        int binaryValueInDecimalForm = 0;
 
 
-       int maxFactorOfTwo = MaxFactorOfTwoFinder.findMaxFactorOfTwo(decimalValue);
+        while (remainder > 0) {
+            int maxFactorOfTwo = MaxFactorOfTwoFinder.findMaxFactorOfTwo(remainder);
+            binaryValueInDecimalForm += Math.pow(2, maxFactorOfTwo);
+            intArray[32 - maxFactorOfTwo - 1] = 1;
+            remainder = decimalValue - binaryValueInDecimalForm;
+        }
 
-       intArray[maxFactorOfTwo] = 1;
+        // I want to take each int from the intArray and push it into a string
+        return Arrays.stream(intArray).mapToObj(String::valueOf).collect(Collectors.joining());
 
-
-
-
-
-
-
-        return Arrays.toString(intArray);
     }
 
 }

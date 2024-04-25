@@ -7,6 +7,7 @@ public class Main {
         if (args == null) {
             return;
         }
+        System.out.println("Converting " + args[0]);
         System.out.println(BinaryDecimalConverter.convertDecimalToBinary(args));
     }
 }

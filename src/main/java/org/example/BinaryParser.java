@@ -9,6 +9,7 @@ public class BinaryParser {
         return result;
     }
 
+
     public static int convertBinaryToDecimal(int[] binary) {
         int sum = 0;
         int index = binary.length - 1;

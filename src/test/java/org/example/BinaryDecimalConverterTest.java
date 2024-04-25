@@ -21,5 +21,24 @@ class BinaryDecimalConverterTest {
         assertEquals(BinaryDecimalConverter.convertDecimalToBinary(notANumber), "Provided value not a decimal number");
     }
 
+    @Test
+    @DisplayName("Converts '8'")
+    void convert8() {
+        String[] number = {"8"};
+        assertEquals("00000000000000000000000000001000", BinaryDecimalConverter.convertDecimalToBinary(number));
+    }
 
+    @Test
+    @DisplayName("Converts '2048'")
+    void convert2048() {
+        String[] number = {"2048"};
+        assertEquals("00000000000000000000100000000000", BinaryDecimalConverter.convertDecimalToBinary(number));
+    }
+
+    @Test
+    @DisplayName("Converts '19'")
+    void convert19() {
+        String[] number = {"19"};
+        assertEquals("00000000000000000000000000010011", BinaryDecimalConverter.convertDecimalToBinary(number));
+    }
 }
