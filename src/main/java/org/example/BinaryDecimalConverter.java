@@ -7,7 +7,7 @@ public class BinaryDecimalConverter {
 
     public static String convertDecimalToBinary(String[] userInput) {
 
-        Integer decimalValue = null;
+        Integer decimalValue;
 
         if (userInput.length == 0) {
             return "No number value provided";
